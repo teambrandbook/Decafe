@@ -31,7 +31,7 @@ export default function SpecialDishes() {
       {/* Background Image Overlay Container */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/special/spl-dish-bg.jpg"
+          src="/images/special/spl-dish-bg.png"
           alt="Special Dishes Background"
           fill
           className="object-cover"

@@ -6,6 +6,7 @@ import { useState } from "react";
 const categories = ["BREAKFAST", "LUNCH", "DESSERT", "DRINKS"];
 
 const menuItems = [
+  // BREAKFAST
   {
     id: 1,
     name: "Waffle Brunch",
@@ -45,15 +46,137 @@ const menuItems = [
     price: "15.50$",
     image: "/images/menus/belgian.jpg",
     category: "BREAKFAST"
+  },
+  // DRINKS
+  {
+    id: 6,
+    name: "Saffron Tea",
+    description: "Refreshing and warm saffron infused tea",
+    price: "2.50$",
+    image: "/images/menucard/saffron-tea.png",
+    category: "DRINKS"
+  },
+  {
+    id: 7,
+    name: "Mango",
+    description: "Freshly squeezed mango juice",
+    price: "3.50$",
+    image: "/images/menucard/mango.png",
+    category: "DRINKS"
+  },
+  {
+    id: 8,
+    name: "Khaltha",
+    description: "Special mixed drink",
+    price: "4.00$",
+    image: "/images/menucard/khaltha.png",
+    category: "DRINKS"
+  },
+  {
+    id: 9,
+    name: "Strawberry + Milk",
+    description: "Fresh strawberry milkshake",
+    price: "3.50$",
+    image: "/images/menucard/strawbeery.png",
+    category: "DRINKS"
+  },
+  {
+    id: 10,
+    name: "Pistachio Avocado",
+    description: "Creamy avocado with crushed pistachios",
+    price: "4.50$",
+    image: "/images/menucard/avacoda.png",
+    category: "DRINKS"
+  },
+  // LUNCH
+  {
+    id: 11,
+    name: "Zinker Burger + Avocado Juice",
+    description: "Delicious zinker burger meal",
+    price: "12.00$",
+    image: "/images/menucard/ziker-avacoda.png",
+    category: "LUNCH"
+  },
+  {
+    id: 12,
+    name: "Vegetable Club + Fresh Veg. Crispy Bread + Veg. Burger + Cola",
+    description: "Complete vegetarian combo",
+    price: "15.00$",
+    image: "/images/menucard/combo.png",
+    category: "LUNCH"
+  },
+  {
+    id: 13,
+    name: "Chicken Burger",
+    description: "Classic chicken burger",
+    price: "8.00$",
+    image: "/images/menucard/chicken-burger.png",
+    category: "LUNCH"
+  },
+  {
+    id: 14,
+    name: "Zinger Sub",
+    description: "Spicy zinger sub sandwich",
+    price: "9.50$",
+    image: "/images/menucard/zinger-sub.png",
+    category: "LUNCH"
+  },
+  {
+    id: 15,
+    name: "Shawarma",
+    description: "Traditional shawarma wrap",
+    price: "6.00$",
+    image: "/images/menucard/shawarma.png",
+    category: "LUNCH"
+  },
+  // DESSERT
+  {
+    id: 16,
+    name: "Razal Special",
+    description: "Made With Fresh Berries",
+    price: "7.00$",
+    image: "/images/menucard/Razal Special.png",
+    category: "DESSERT"
+  },
+  {
+    id: 17,
+    name: "Lotus Ice Cream",
+    description: "Creamy lotus biscoff ice cream",
+    price: "5.50$",
+    image: "/images/menucard/Lotus-Ice-Cream.png",
+    category: "DESSERT"
+  },
+  {
+    id: 18,
+    name: "Fruit Salad With Ice Cream",
+    description: "Fresh fruits with vanilla ice cream",
+    price: "6.50$",
+    image: "/images/menucard/fruit-salad-icecream.png",
+    category: "DESSERT"
+  },
+  {
+    id: 19,
+    name: "Fruits Salad With Caramel Ice Cream",
+    description: "Fresh fruits with caramel drizzle",
+    price: "7.00$",
+    image: "/images/menucard/Fruits-Salad-With-Caramel-Ice-Cream.png",
+    category: "DESSERT"
+  },
+  {
+    id: 20,
+    name: "Mango Cream",
+    description: "Rich and creamy mango dessert",
+    price: "5.00$",
+    image: "/images/menucard/mango-icecream.png",
+    category: "DESSERT"
   }
 ];
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("BREAKFAST");
 
-  // In a real app, we would filter by category. 
-  // For this design demo, we'll just show the same items to demonstrate the layout.
-  const filteredItems = menuItems;
+  // Filter items based on active category
+  const filteredItems = menuItems.filter(item => item.category === activeCategory);
 
   return (
     <section id="menu" className="py-32 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48 bg-white">
