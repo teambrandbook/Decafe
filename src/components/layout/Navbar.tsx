@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between max-w-7xl mx-auto relative">
         {/* Logo */}
         <Link href="/" className="relative w-20 h-20 md:w-24 md:h-24 hover:opacity-80 transition-opacity -mt-2">
-          <Image src="/images/decafe-logo.png" alt="DCafe Logo" fill className="object-contain" priority />
+          <Image src="/images/decafe-logo.png" alt="DCafe Logo" fill sizes="96px" className="object-contain" priority />
         </Link>
 
         {/* Desktop Nav */}

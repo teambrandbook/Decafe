@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal, { StaggerReveal, RevealItem } from "@/components/ui/ScrollReveal";
 
 const galleryImages = [
   "/images/hero/hero-section.jpg",
@@ -15,11 +16,18 @@ const galleryImages = [
 export default function Gallery() {
   return (
     <section id="gallery" className="py-32 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48 bg-dark flex flex-col items-center">
-      
+      <ScrollReveal className="w-full flex flex-col items-center">
+        {/* Title */}
+        <div className="text-center mb-12 flex flex-col items-center">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-5xl text-gold mb-6">
+          Gallery
+        </h2>
+      </div>
+
       {/* Image Grid */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-16">
+      <StaggerReveal className="w-full max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
         {galleryImages.map((src, index) => (
-          <div key={index} className="relative w-full aspect-square overflow-hidden group cursor-pointer">
+          <RevealItem key={index} className="relative w-full aspect-square overflow-hidden group cursor-pointer">
             <Image
               src={src}
               alt={`Gallery Image ${index + 1}`}
@@ -29,18 +37,11 @@ export default function Gallery() {
             />
             {/* Optional overlay effect on hover */}
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </div>
+          </RevealItem>
         ))}
-      </div>
+      </StaggerReveal>
 
-      {/* Action Button */}
-      <Link 
-        href="#menu"
-        className="bg-white text-dark px-8 py-3.5 rounded-sm font-bold text-xs tracking-[0.2em] uppercase transition-transform hover:scale-105 shadow-md"
-      >
-        Explore the Menu
-      </Link>
-      
+      </ScrollReveal>
     </section>
   );
 }

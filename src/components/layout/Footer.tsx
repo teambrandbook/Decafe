@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             {/* Logo */}
             <Link href="/" className="relative w-32 h-32 hover:opacity-80 transition-opacity mb-4">
-              <Image src="/images/decafe-logo.png" alt="DCafe Logo" fill className="object-contain" />
+              <Image src="/images/decafe-logo.png" alt="DCafe Logo" fill sizes="128px" className="object-contain" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Dear guests, you are welcomed to dine with us at Foxe restaurant. Have a pleasant dining experience.
@@ -24,6 +24,7 @@ export default function Footer() {
                 src="/images/sign.png" 
                 alt="Signature" 
                 fill 
+                sizes="160px"
                 className="object-contain object-left opacity-80" 
               />
             </div>
@@ -32,13 +33,13 @@ export default function Footer() {
           {/* Column 2: Address */}
           <div className="flex flex-col">
             <h4 className="text-white font-bold text-lg mb-8">Address</h4>
-            <p className="text-gray-400 text-sm mb-4">+1 (513) 352-3209</p>
+            <p className="text-gray-400 text-sm mb-4">+971 56 105 6260</p>
             <a href="mailto:customers@foxeresto.net" className="text-[#dbb374] text-sm mb-6 hover:underline">
               customers@foxeresto.net
             </a>
             <p className="text-gray-400 text-sm leading-relaxed">
-              3805 Edwards Rd, Cincinnati, Ohio<br />
-              45209 USA
+              Shop No: 1 AL Diyafa Residences<br />
+              Satwa, Dubai, UAE
             </p>
           </div>
 
@@ -66,7 +67,7 @@ export default function Footer() {
 
           {/* Column 4: Instagram */}
           <div className="flex flex-col">
-            <h4 className="text-white font-bold text-lg mb-8">Instagram</h4>
+            <h4 className="text-white font-semibold text-lg mb-8">Instagram</h4>
             {/* Instagram feed placeholder */}
             <div className="grid grid-cols-3 gap-2">
               {[1, 2, 3, 4, 5, 6].map((_, i) => (
@@ -103,7 +104,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-gray-500 text-xs text-right">
-            © 2019 MutationMedia. All rights reserved.
+            © 2026 D'cafe. All rights reserved.
           </div>
 
         </div>

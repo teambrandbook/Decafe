@@ -1,4 +1,5 @@
 import ServiceCard from "@/components/ui/ServiceCard";
+import ScrollReveal, { StaggerReveal, RevealItem } from "@/components/ui/ScrollReveal";
 
 const services = [
   {
@@ -42,7 +43,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="relative pt-32 pb-56 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <ScrollReveal className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Header */}
         <div className="text-center mb-24 max-w-2xl flex flex-col items-center">
@@ -58,16 +59,18 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 w-full mb-24">
+        <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 w-full mb-24">
           {services.map((service, index) => (
+            <RevealItem key={index}>
             <ServiceCard
               key={index}
               title={service.title}
               description={service.description}
               icon={service.icon}
             />
+            </RevealItem>
           ))}
-        </div>
+        </StaggerReveal>
 
         {/* Footer Note */}
         <div className="flex flex-col items-center w-full max-w-2xl mx-auto text-center relative z-20">
@@ -76,7 +79,7 @@ export default function Services() {
             * Dear guests, you are welcomed to dine with us at Foxe restaurant. Have a pleasant dining experience.
           </p>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* Bottom Arch / Curve transitioning to next dark section */}
       <div className="absolute -bottom-[2px] left-0 w-full overflow-hidden leading-none z-10 text-[#151515]">

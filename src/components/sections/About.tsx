@@ -1,9 +1,10 @@
 import Image from "next/image";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function About() {
   return (
     <section id="about" className="py-32 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <ScrollReveal className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         
         {/* Left Content */}
         <div className="flex flex-col items-start max-w-xl">
@@ -86,7 +87,7 @@ export default function About() {
           </div>
         </div>
         
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

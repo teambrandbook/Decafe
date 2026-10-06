@@ -16,6 +16,7 @@ export default function MenuItem({ name, description, price, image }: MenuItemPr
           src={image}
           alt={name}
           fill
+          sizes="64px"
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>

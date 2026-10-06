@@ -2,6 +2,7 @@
 
 import MenuItem from "@/components/ui/MenuItem";
 import { useState } from "react";
+import ScrollReveal, { StaggerReveal, RevealItem } from "@/components/ui/ScrollReveal";
 
 const categories = ["BREAKFAST", "LUNCH", "DESSERT", "DRINKS"];
 
@@ -9,41 +10,41 @@ const menuItems = [
   // BREAKFAST
   {
     id: 1,
-    name: "Waffle Brunch",
-    description: "French Toast / Bacon / Strawberries",
-    price: "3.00$",
+    name: "Vegetable Sandwich",
+    description: "Fresh vegetables and herbs",
+    price: "4.50$",
     image: "/images/menus/waffle.jpg",
     category: "BREAKFAST"
   },
   {
     id: 2,
-    name: "Farmhouse Omelette",
-    description: "Sauteed Potatoes / Bacon / Grilled Onions",
-    price: "4.30$",
+    name: "Chicken Mayonnaise",
+    description: "Tender chicken with creamy mayonnaise",
+    price: "5.50$",
     image: "/images/menus/farmhouse-omlette.jpg",
     category: "BREAKFAST"
   },
   {
     id: 3,
-    name: "Chef's Omelette",
-    description: "Avocado / Mushrooms / Green Onion / Tomato",
-    price: "5.50$",
+    name: "Cheese Egg Sandwich",
+    description: "Melted cheese and fresh eggs",
+    price: "4.00$",
     image: "/images/menus/chefs-omelette.jpg",
     category: "BREAKFAST"
   },
   {
     id: 4,
-    name: "Waffles Benedict",
-    description: "Strawberries / Pecans / Chantilly Cream",
-    price: "4.00$",
+    name: "Peanut Banana",
+    description: "Peanut butter and sliced banana toast",
+    price: "3.50$",
     image: "/images/menus/benedict.jpg",
     category: "BREAKFAST"
   },
   {
     id: 5,
-    name: "Belgian Waffle",
-    description: "Maple Butter / Syrup",
-    price: "15.50$",
+    name: "Egg Boiled",
+    description: "Perfectly soft boiled eggs",
+    price: "2.00$",
     image: "/images/menus/belgian.jpg",
     category: "BREAKFAST"
   },
@@ -180,7 +181,7 @@ export default function Menu() {
 
   return (
     <section id="menu" className="py-32 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+      <ScrollReveal className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Header */}
         <div className="text-center mb-12 max-w-2xl flex flex-col items-center">
@@ -213,19 +214,32 @@ export default function Menu() {
         </div>
 
         {/* Menu Items List */}
-        <div className="w-full flex flex-col items-center">
+        <StaggerReveal key={activeCategory} className="w-full flex flex-col items-center">
           {filteredItems.map((item) => (
-            <MenuItem
-              key={item.id}
-              name={item.name}
-              description={item.description}
-              price={item.price}
-              image={item.image}
-            />
+            <RevealItem key={item.id} className="w-full flex flex-col items-center">
+              <MenuItem
+                key={item.id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            </RevealItem>
           ))}
+        </StaggerReveal>
+
+        {/* Download Button */}
+        <div className="mt-16 text-center">
+          <a
+            href="/files/menu.pdf"
+            download="menu.pdf"
+            className="bg-[#0b1c17] text-white px-8 py-4 rounded-sm font-bold text-xs tracking-[0.2em] uppercase transition-transform hover:scale-105 shadow-md inline-block"
+          >
+            DOWNLOAD MENU
+          </a>
         </div>
         
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

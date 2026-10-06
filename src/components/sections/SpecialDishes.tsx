@@ -1,5 +1,6 @@
 import DishCard from "@/components/ui/DishCard";
 import Image from "next/image";
+import ScrollReveal, { StaggerReveal, RevealItem } from "@/components/ui/ScrollReveal";
 
 const dishes = [
   {
@@ -34,13 +35,14 @@ export default function SpecialDishes() {
           src="/images/special/spl-dish-bg.png"
           alt="Special Dishes Background"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#09241FD9] opacity-100" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
+      <ScrollReveal className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
         {/* Header */}
         <div className="text-center mb-20 max-w-2xl">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-gold mb-6 drop-shadow-sm">
@@ -52,8 +54,9 @@ export default function SpecialDishes() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full">
+        <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full">
           {dishes.map((dish) => (
+            <RevealItem key={dish.id}>
             <DishCard
               key={dish.id}
               name={dish.name}
@@ -61,9 +64,10 @@ export default function SpecialDishes() {
               description={dish.description}
               image={dish.image}
             />
+            </RevealItem>
           ))}
-        </div>
-      </div>
+        </StaggerReveal>
+      </ScrollReveal>
     </section>
   );
 }
