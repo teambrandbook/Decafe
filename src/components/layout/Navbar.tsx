@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="bg-gold hover:bg-gold-hover text-dark px-6 py-2 rounded-full text-sm font-Lato-Bold tracking-wider transition-colors"
+              className="bg-gold hover:bg-gold-hover text-dark px-6 py-2 rounded-full text-sm font-extrabold tracking-wider transition-colors"
             >
               {link.name}
             </Link>
@@ -66,7 +66,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-white hover:text-gold px-6 py-2 rounded-full text-sm font-Lato-Bold tracking-wider transition-colors"
+              className="text-white hover:text-gold px-6 py-2 rounded-full text-sm font-extrabold tracking-wider transition-colors"
             >
               {link.name}
             </Link>

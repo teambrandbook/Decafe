@@ -74,11 +74,7 @@ export default function Hero() {
         </svg>
       </div>
       
-      {/* Pagination Dots */}
-      <div className="absolute bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-        <div className="w-2 h-2 rounded-full bg-gray-400 transition-colors"></div>
-        <div className="w-2 h-2 rounded-full bg-gold transition-colors"></div>
-      </div>
+      
     </section>
   );
 }
