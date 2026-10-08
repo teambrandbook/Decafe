@@ -5,24 +5,24 @@ import ScrollReveal, { StaggerReveal, RevealItem } from "@/components/ui/ScrollR
 const dishes = [
   {
     id: 1,
-    name: "Product Name Here",
+    name: "Grilled Shawarma",
     price: "$30.00",
     description: "Conveniently imailpact worldwide data aprovements a with holistic theme and improvements with there holistic",
-    image: "/images/special/spl-1.jpg",
+    image: "/images/special/special-1.jpg",
   },
   {
     id: 2,
-    name: "Product Name Here",
+    name: "Lims Special Club A signature-style club sandwich",
     price: "$30.00",
     description: "Conveniently imailpact worldwide data aprovements a with holistic theme and improvements with there holistic",
-    image: "/images/special/spl-2.jpg",
+    image: "/images/special/special-2.jpg",
   },
   {
     id: 3,
-    name: "Product Name Here",
+    name: "Zinker Burger + Avocado Juice",
     price: "$30.00",
     description: "Conveniently imailpact worldwide data aprovements a with holistic theme and improvements with there holistic",
-    image: "/images/special/spl-3.jpg",
+    image: "/images/special/special-3.jpg",
   },
 ];
 
