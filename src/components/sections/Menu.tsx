@@ -12,7 +12,7 @@ const menuItems = [
     id: 1,
     name: "Vegetable Sandwich",
     description: "Fresh vegetables and herbs",
-    price: "4.50$",
+    price: "4.50 AED",
     image: "/images/menus/waffle.jpg",
     category: "BREAKFAST"
   },
@@ -20,7 +20,7 @@ const menuItems = [
     id: 2,
     name: "Chicken Mayonnaise",
     description: "Tender chicken with creamy mayonnaise",
-    price: "5.50$",
+    price: "5.50 AED",
     image: "/images/menus/farmhouse-omlette.jpg",
     category: "BREAKFAST"
   },
@@ -28,7 +28,7 @@ const menuItems = [
     id: 3,
     name: "Cheese Egg Sandwich",
     description: "Melted cheese and fresh eggs",
-    price: "4.00$",
+    price: "4.00 AED",
     image: "/images/menus/chefs-omelette.jpg",
     category: "BREAKFAST"
   },
@@ -36,7 +36,7 @@ const menuItems = [
     id: 4,
     name: "Peanut Banana",
     description: "Peanut butter and sliced banana toast",
-    price: "3.50$",
+    price: "3.50 AED",
     image: "/images/menus/benedict.jpg",
     category: "BREAKFAST"
   },
@@ -44,7 +44,7 @@ const menuItems = [
     id: 5,
     name: "Egg Boiled",
     description: "Perfectly soft boiled eggs",
-    price: "2.00$",
+    price: "2.00 AED",
     image: "/images/menus/belgian.jpg",
     category: "BREAKFAST"
   },
@@ -53,7 +53,7 @@ const menuItems = [
     id: 6,
     name: "Saffron Tea",
     description: "Refreshing and warm saffron infused tea",
-    price: "2.50$",
+    price: "2.50 AED",
     image: "/images/menucard/saffron-tea.png",
     category: "DRINKS"
   },
@@ -61,7 +61,7 @@ const menuItems = [
     id: 7,
     name: "Mango",
     description: "Freshly squeezed mango juice",
-    price: "3.50$",
+    price: "3.50 AED",
     image: "/images/menucard/mango.png",
     category: "DRINKS"
   },
@@ -69,7 +69,7 @@ const menuItems = [
     id: 8,
     name: "Khaltha",
     description: "Special mixed drink",
-    price: "4.00$",
+    price: "4.00 AED",
     image: "/images/menucard/khaltha.png",
     category: "DRINKS"
   },
@@ -77,7 +77,7 @@ const menuItems = [
     id: 9,
     name: "Strawberry + Milk",
     description: "Fresh strawberry milkshake",
-    price: "3.50$",
+    price: "3.50 AED",
     image: "/images/menucard/strawbeery.png",
     category: "DRINKS"
   },
@@ -85,7 +85,7 @@ const menuItems = [
     id: 10,
     name: "Pistachio Avocado",
     description: "Creamy avocado with crushed pistachios",
-    price: "4.50$",
+    price: "4.50 AED",
     image: "/images/menucard/avacoda.png",
     category: "DRINKS"
   },
@@ -94,7 +94,7 @@ const menuItems = [
     id: 11,
     name: "Zinker Burger + Avocado Juice",
     description: "Delicious zinker burger meal",
-    price: "12.00$",
+    price: "12.00 AED",
     image: "/images/menucard/ziker-avacoda.png",
     category: "LUNCH"
   },
@@ -102,7 +102,7 @@ const menuItems = [
     id: 12,
     name: "Vegetable Club + Fresh Veg. Crispy Bread + Veg. Burger + Cola",
     description: "Complete vegetarian combo",
-    price: "15.00$",
+    price: "15.00 AED",
     image: "/images/menucard/combo.png",
     category: "LUNCH"
   },
@@ -110,7 +110,7 @@ const menuItems = [
     id: 13,
     name: "Chicken Burger",
     description: "Classic chicken burger",
-    price: "8.00$",
+    price: "8.00 AED",
     image: "/images/menucard/chicken-burger.png",
     category: "LUNCH"
   },
@@ -118,7 +118,7 @@ const menuItems = [
     id: 14,
     name: "Zinger Sub",
     description: "Spicy zinger sub sandwich",
-    price: "9.50$",
+    price: "9.50 AED",
     image: "/images/menucard/zinger-sub.png",
     category: "LUNCH"
   },
@@ -126,7 +126,7 @@ const menuItems = [
     id: 15,
     name: "Shawarma",
     description: "Traditional shawarma wrap",
-    price: "6.00$",
+    price: "6.00 AED",
     image: "/images/menucard/shawarma.png",
     category: "LUNCH"
   },
@@ -135,7 +135,7 @@ const menuItems = [
     id: 16,
     name: "Razal Special",
     description: "Made With Fresh Berries",
-    price: "7.00$",
+    price: "7.00 AED",
     image: "/images/menucard/Razal Special.png",
     category: "DESSERT"
   },
@@ -143,7 +143,7 @@ const menuItems = [
     id: 17,
     name: "Lotus Ice Cream",
     description: "Creamy lotus biscoff ice cream",
-    price: "5.50$",
+    price: "5.50 AED",
     image: "/images/menucard/Lotus-Ice-Cream.png",
     category: "DESSERT"
   },
@@ -151,7 +151,7 @@ const menuItems = [
     id: 18,
     name: "Fruit Salad With Ice Cream",
     description: "Fresh fruits with vanilla ice cream",
-    price: "6.50$",
+    price: "6.50 AED",
     image: "/images/menucard/fruit-salad-icecream.png",
     category: "DESSERT"
   },
@@ -159,7 +159,7 @@ const menuItems = [
     id: 19,
     name: "Fruits Salad With Caramel Ice Cream",
     description: "Fresh fruits with caramel drizzle",
-    price: "7.00$",
+    price: "7.00 AED",
     image: "/images/menucard/Fruits-Salad-With-Caramel-Ice-Cream.png",
     category: "DESSERT"
   },
@@ -167,7 +167,7 @@ const menuItems = [
     id: 20,
     name: "Mango Cream",
     description: "Rich and creamy mango dessert",
-    price: "5.00$",
+    price: "5.00 AED",
     image: "/images/menucard/mango-icecream.png",
     category: "DESSERT"
   }
